@@ -27,9 +27,10 @@ type Options = (
 export default function createPresenceSignal(
   /** Indicates whether the component that the resulting values will be used upon should be visible to the user. */
   isVisible: Accessor<boolean>,
-  optsInit: Options
+  optsValue: Options | Accessor<Options>
 ) {
-  const [opts, setOpts] = createSignal(optsInit);
+  const opts = () =>
+    typeof optsValue === "function" ? optsValue() : optsValue;
   const exitTransitionDuration = () => {
     const optsValue = opts();
     return "exitTransitionDuration" in optsValue
@@ -106,7 +107,5 @@ export default function createPresenceSignal(
     isAnimating,
     isEntering,
     isExiting,
-    opts,
-    setOpts,
   };
 }

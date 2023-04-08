@@ -3,16 +3,13 @@ import createPresenceSignal from "./createPresenceSignal";
 
 export default function createPresenceSwitchSignal<ItemType>(
   item: Accessor<ItemType | undefined>,
-  optsInit: Parameters<typeof createPresenceSignal>[1]
+  opts: Parameters<typeof createPresenceSignal>[1]
 ) {
   const [mountedItem, setMountedItem] = createSignal(item());
   const [shouldBeMounted, setShouldBeMounted] = createSignal(
     item !== undefined
   );
-  const { isMounted, ...rest } = createPresenceSignal(
-    shouldBeMounted,
-    optsInit
-  );
+  const { isMounted, ...rest } = createPresenceSignal(shouldBeMounted, opts);
 
   createEffect(() => {
     if (mountedItem() !== item()) {
