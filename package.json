@@ -1,6 +1,6 @@
 {
   "name": "solid-presence-signal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A small SolidJS utility to animate the presence of an element",
   "files": [
     "dist"
@@ -31,5 +31,7 @@
   },
   "peerDependencies": {
     "solid-js": "^1.6.10"
-  }
+  },
+  "homepage": "https://github.com/EthanStandel/solid-presence-signal/tree/main/packages/core#readme",
+  "repository": "https://github.com/EthanStandel/solid-presence-signal/tree/main/packages/core"
 }

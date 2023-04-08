@@ -1,5 +1,9 @@
 # solid-presence-signal
 
+[![Stable release](https://img.shields.io/npm/v/solid-presence-signal.svg)](https://npm.im/solid-presence-signal)
+
+## [Example](https://stackblitz.com/edit/solidjs-templates-8eqpxz)
+
 A small SolidJS utility to animate the presence of an element. Inspired by & directly forked from [`use-presence`](https://www.npmjs.com/package/use-presence).
 
 ## The problem
