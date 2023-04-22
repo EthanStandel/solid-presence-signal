@@ -32,6 +32,13 @@
   "peerDependencies": {
     "solid-js": "^1.6.10"
   },
+  "keywords": [
+    "animation",
+    "animate",
+    "signal",
+    "solid",
+    "presence"
+  ],
   "homepage": "https://github.com/EthanStandel/solid-presence-signal/tree/main#readme",
   "repository": "https://github.com/EthanStandel/solid-presence-signal/tree/main"
 }
