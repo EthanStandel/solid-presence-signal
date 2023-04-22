@@ -1,6 +1,6 @@
 {
   "name": "solid-presence-signal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A small SolidJS utility to animate the presence of an element",
   "files": [
     "dist"

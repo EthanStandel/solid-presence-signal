@@ -7,7 +7,7 @@ export default function createPresenceSwitchSignal<ItemType>(
 ) {
   const [mountedItem, setMountedItem] = createSignal(item());
   const [shouldBeMounted, setShouldBeMounted] = createSignal(
-    item !== undefined
+    item() !== undefined
   );
   const { isMounted, ...rest } = createPresenceSignal(shouldBeMounted, opts);
 
@@ -15,7 +15,7 @@ export default function createPresenceSwitchSignal<ItemType>(
     if (mountedItem() !== item()) {
       if (isMounted()) {
         setShouldBeMounted(false);
-      } else if (item !== undefined) {
+      } else if (item() !== undefined) {
         setMountedItem(() => item());
         setShouldBeMounted(true);
       }
